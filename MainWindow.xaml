@@ -1,0 +1,17 @@
+﻿<Window x:Class="DragPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:custom="clr-namespace:CustomControl"
+        xmlns:local="clr-namespace:DragPanel"
+        mc:Ignorable="d"
+        Title="DragPanelDemo" Height="350" Width="525">
+    <Grid>
+        <custom:DragPanel>
+            <TextBlock Text="this is a text" FontSize="16" custom:DragPanel.CanDelete="True" custom:DragPanel.CanRotation="True"/>
+            <TextBlock Canvas.Top="50" Text="this is a text, but can not move, roration or delete" FontSize="16" custom:DragPanel.CanDrag="False" custom:DragPanel.CanRotation="False"/>
+            <Rectangle Width="100" Height="100" Fill="Blue" Canvas.Left="50" Canvas.Top="100" custom:DragPanel.CanDelete="True" custom:DragPanel.CanRotation="True"/>
+        </custom:DragPanel>
+    </Grid>
+</Window>
